@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import "./ShoppingCart.css";
 
 class ShoppingCart extends Component {
+  constructor(props){
+    super(props)
+
+
+  }
+
   render() {
     let shoppingCartDisplay = this.props.cart.map((element, index) => {
       return (
@@ -13,7 +19,7 @@ class ShoppingCart extends Component {
             <div className="shopping-cart-button-container">
               <button
                 className="shopping-cart-button"
-                onClick={() => this.props.removeFromCart}
+                onClick={() => this.props.removeFromCart()}
               >
                 Remove From Shopping Cart
               </button>

@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import './StoreFront.css';
 
 class StoreFront extends Component {
+  constructor(props){
+    super(props)
+
+  }
+
   render() {
+    console.log(this.props)
     let productDisplay = this.props.products.map((element, index) => {
       return (
         <div className="product-container" key={index}>
@@ -16,6 +22,7 @@ class StoreFront extends Component {
     })
     return (
       <div className="storefront-container">
+        {productDisplay}
       </div>
     )
   }
